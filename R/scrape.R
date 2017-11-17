@@ -22,8 +22,7 @@ colnames(pic_index_2017) <- c("pic_rank", "town", "pop",
                               "unempl_pts", "total_pts")
 
 pic_index_2017_clean <- pic_index_2017 %>%  
-  mutate(afdc_pct = afdc_pct / 100,
-         unempl_rt = unempl_rt / 100)
+  mutate(unempl_rt = unempl_rt / 100)
 
 # save data as r data file
 saveRDS(pic_index_2017_clean, "data/pic_index_2017.rda")
